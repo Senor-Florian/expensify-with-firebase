@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     return {
         entry: './src/app.js',
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -43,6 +43,11 @@ module.exports = (env, argv) => {
             static: path.join(__dirname, 'public'),
             historyApiFallback: true
         },
-        mode: 'development'
+        mode: 'development',
+        output: {
+            path: path.join(__dirname, "public", "dist"),
+            filename: "bundle.js",
+            publicPath: "/dist/"
+          }
     }
 };
