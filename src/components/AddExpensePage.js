@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 import { useNavigate } from 'react-router-dom';
 
 const AddExpensePage = (props) => {
@@ -21,7 +21,7 @@ const AddExpensePage = (props) => {
 };
 
 const onSumbit = (expense, props) => {
-    props.dispatch(addExpense(expense));
+    props.dispatch(startAddExpense(expense));
 };
 
 export default connect()(AddExpensePage);
