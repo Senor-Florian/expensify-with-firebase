@@ -2,18 +2,6 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 //import { getDatabase, onValue, push, ref, set, update } from "firebase/database";
 
-console.log('faszomgeci', process.env.NODE_ENV);
-console.log('faszomgeci2', process.env);
-
-console.log(process.env.FIREBASE_API_KEY);
-console.log(process.env.FIREBASE_AUTH_DOMAIN);
-console.log(process.env.FIREBASE_DATABASE_URL);
-console.log(process.env.FIREBASE_PROJECT_ID);
-console.log(process.env.FIREBASE_STORAGE_BUCKET);
-console.log(process.env.FIREBASE_MESSAGING_SENDER_ID);
-console.log(process.env.FIREBASE_APP_ID);
-console.log(process.env.FIREBASE_MEASUREMENT_ID);
-
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
