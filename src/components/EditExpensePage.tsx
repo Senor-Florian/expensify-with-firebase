@@ -2,16 +2,15 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ExpenseForm from './ExpenseForm';
 import { startRemoveExpense } from '../actions/expenses';
-import Expense from '../interfaces/Expense';
 import { useAppDispatch, useAppSelector } from "../hooks/hooks";
+import expenseById from '../selectors/expense-by-id';
 
 const EditExpensePage = () => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
-    const params = { id: window.location.pathname.split("/")[2] }
-    const expense = useAppSelector(state => state.expenses).find((expense : Expense) => expense.id === params.id) as Expense | null; // todo this could be better
-    const id = expense?.id ?? '';
+    const id = window.location.pathname.split("/")[2]; // todo this could be better
+    const expense = useAppSelector(state => expenseById(state.expenses, id));
 
     return (
         <div>

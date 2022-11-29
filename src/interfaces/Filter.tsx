@@ -7,6 +7,6 @@ interface Filter {
     endDate: moment.Moment,
 }
 
-// todo date fns INSTEAD OF MOMENT
+// todo date fns instead of moment
 
 export default Filter;

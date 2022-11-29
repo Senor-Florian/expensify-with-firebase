@@ -8,7 +8,7 @@ import { useAppDispatch } from "../hooks/hooks";
 import { useNavigate } from 'react-router-dom';
 import { startAddExpense, startEditExpense } from '../actions/expenses';
 
-const ExpenseForm = ({ existingExpense }: { existingExpense: Expense | null }) => {
+const ExpenseForm = ({ existingExpense } : { existingExpense: Expense | null }) => {
     const isUpdate = existingExpense !== null;
 
     const dispatch = useAppDispatch();

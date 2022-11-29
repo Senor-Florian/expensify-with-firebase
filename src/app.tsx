@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter';
 import { } from 'react-dom';
 import store from './store/store';
-import { useAppSelector, useAppDispatch } from './hooks/hooks'
 import { startSetExpenses } from './actions/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -19,7 +18,6 @@ const jsx = (
     </Provider>
 );
 
-// ! asserts that the value is never null
 const root = ReactDOM.createRoot(document.getElementById('app')!);
 let hasRendered = false;
 

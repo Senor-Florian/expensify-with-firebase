@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpenseForm from './ExpenseForm';
 
-const AddExpensePage = (props : any) => {
+const AddExpensePage = () => {
     return (
         <div>
             <div className="page-header">
@@ -10,7 +10,7 @@ const AddExpensePage = (props : any) => {
                 </div>
             </div>
             <div className="content-container">
-                <ExpenseForm existingExpense={null}/>
+                <ExpenseForm existingExpense={null} />
             </div>
         </div>
     );
